@@ -12,7 +12,7 @@
 
 int _printf_handler(const char *format, mapped_func mf[], va_list args)
 {
-	int a, b, c, printed_chars = 0;
+	int a = 0, b, c, printed_chars = 0;
 
 	while (*format != '\0')
 	{

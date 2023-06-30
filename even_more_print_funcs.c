@@ -39,18 +39,18 @@ int print_rot13(va_list vl)
 	str = va_arg(vl, char *);
 	if (str == NULL)
 		return (-1);
-	for (i = 0; str[i] != '\0'; i++)
+	for (a = 0; str[a] != '\0'; a++)
 	{
-		for (x = 0; x <= 52; x++)
+		for (b = 0; b <= 52; b++)
 		{
-			if (str[i] == s[x])
+			if (str[a] == s[b])
 			{
-				_putchar(u[x]);
+				_putchar(u[b]);
 				break;
 			}
 		}
-		if (x == 53)
-			_putchar(str[i]);
+		if (b == 53)
+			_putchar(str[a]);
 	}
-	return (i);
+	return (a);
 }
